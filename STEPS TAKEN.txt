@@ -1,0 +1,27 @@
+1. Clone the homework directory from github
+    1.1. git init
+    1.2. git clone https://github.com/rails-decal/NAMEOFDIRECTORY.git
+
+2. launch rails in vagrant
+    2.1. switch to downloaded directory
+    2.2. vagrant up
+    2.3. vagrant ssh
+    2.4. cd /vagrant/
+    2.5. cd /insertnameofhomeworkfolder/
+    2.6. bundle install
+    2.7. rails server
+    2.8. go to localhost:3000
+
+3. adding pages redirect
+    3.1. go to config/routes.rb
+    3.2. add in redirect of form:
+        get "home", to: "pages#home"
+    3.3. create a pages_controller.rb in app/controllers
+    3.4. insert code of the form: 
+        class PagesController < ActionController::Base
+            def home
+            end
+        end
+    Where you replace home with whatever the name of the page is
+
+4. go to localhost:3000/home to see the page!
